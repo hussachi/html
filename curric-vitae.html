@@ -1,449 +1,66 @@
-<!doctype html>
 
-<html lang="fr">
-    <head>
-        <title>Curriculum vitae</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-        <!-- Load external CSS styles -->
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <style>
-/* font styles */
-    html,body,h2,h3,h4,h5,h6 {font-family: Georgia, serif}
-    p{font-size:34px;}
-
-    h1 {font-family: "Times New Roman", Times, serif;
-    font-size:50px;}
-
-/*  margin to attributes */
-    a {
-   display: inline-block;
-   margin: 30px;
-}
-/* Style the body*/
-    body {
-  background-image: url("https://w0.peakpx.com/wallpaper/672/127/HD-wallpaper-land-surveyor-art-work.jpg");
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;}
-* {
-  box-sizing: border-box;
-}
-
-
-
-/* Style the header */
-.header {
-  background-color: 0;
-  font-size:200%;
-  padding: 20px;
-  text-align: center;
-  
-}
-
-/* Style the top navigation bar */
-.topnav {
-    background-image: url("https://img.freepik.com/free-vector/black-topographic-map-lines-background_1017-13987.jpg");
-  overflow: hidden;
-  
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 25px 100px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 15px;
-}
-
-/* Clear floats after the columns */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-
-    </style>
-
-
-    <body>
-
-        
-
-<div class="header">
+<!DOCTYPE html>
+<html lang="en">
+<head>
     
-      <h1 style="font-size:220px;"><ins>Curriculum vitæ</ins></h1>
-      <br>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Quick Start - Leaflet</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
- 
-</div>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-<div class="topnav" >
-  
-    <a class="w3-hover-teal" href="index.html"><h1 style="color:White;" >Curriculum Vitæ</h1></a>
-    <a class="w3-hover-teal" href="file:///C:/Users/ROG%20G15/Desktop/certificat/556dcd39-f5c7-4d86-8b8c-787eae1373fe.pdf"><h1 style="color:White;">Certificates</h1></a>
-    <a class="w3-hover-teal" href="#"><h1 style="color:White;">More</h1></a>
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 400px;
+			width: 600px;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	</style>
 
-</div>
-<br>
-<br> 
-<br>
-<br>
-<br>
-<br>   
-<br>
+	
+</head>
+<body>
 
-<div class="w3-row-padding">
-  <div class="w3-quarter w3-container w3-center w3-dark-gray w3-padding-16">  
-    <br>
+
+
+<div id="map" style="width: 600px; height: 400px;"></div>
+<script>
+
+	const map = L.map('map').setView([33.980905, -6.86351], 13);
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
+	const marker = L.marker([33.980905, -6.86351]).addTo(map)
+		.bindPopup('<b>Hello world!</b><br />I am a popup.').openPopup();
     
-    <div class="w3-dropdown-hover"><img src="https://i.imgur.com/H2kthOP.jpg" class="w3-circle" height=50%; width=100%;>
-      <div class="w3-dropdown-content" style="width:300px"><br>
-        <img src="https://i.imgur.com/H2kthOP.jpg" alt="Photo" style="width:300%">
-      </div>
+    var redMarker = L.AwesomeMarkers.icon({
+        icon: 'coffee',
+        markerColor: 'red'
+    });
+
+    L.marker([33.980674, -6.8636981], {icon: redMarker}).addTo(map);
 
 
-    </div>
 
-    <BR>
-    <br>
-    <br>
-    <br>
-    <div class="w3-padding-16" > 
-        
-        <p><pre><i class='fas fa-phone-volume'  style='font-size:35px;color:white'>  Phone:  +212 7 05 42 71 87<hr></i><pre><p>
-        <p><pre><i class='fas fa-at' style='font-size:35px;color:white'>  Email:  Hussachi2001@gmail.com<hr></i></pre><p>
-        <p><pre><i class='fas fa-map-pin' style='font-size:35px;color:white'>  Adresse:  Quartier moderne, Beni-Mellal<hr></i></pre><p>
-    </div>
+	
 
-    <div class=" w3-panel w3-black" >    
-        <h1>SKILLS</h1>
-    </div>
-    <div class="w3-padding-16" >
-      <br>
-      <p>AUTOCAD</p>
-      <div class="w3-bar w3-border w3-light-grey">
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item  "></div>
-        <div class="w3-bar-item "></div>
-        <div class="w3-bar-item "></div>          
-      </div>
-      <br>
-      <br>
-      <br>
-      <p>COVADIS</p>
-      <div class="w3-bar w3-border w3-light-grey">
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item  "></div>
-        <div class="w3-bar-item "></div>
-        <div class="w3-bar-item "></div>          
-      </div>
-      <br>
-      <br>
-      <br>
-      <p>AGISOFT</p>
-      <div class="w3-bar w3-border w3-light-grey">
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green  "></div>
-        <div class="w3-bar-item "></div>
-        <div class="w3-bar-item "></div>          
-      </div>
-      <br>
-      <br>
-      <br>
-      <p>TRIMBLE</p>
-      <div class="w3-bar w3-border w3-light-grey">
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green  "></div>
-        <div class="w3-bar-item "></div>
-        <div class="w3-bar-item "></div>          
-      </div>
-      <br>
-      <br>
-      <br>
-      <p>ERDAS</p>
-      <div class="w3-bar w3-border w3-light-grey">
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item "></div>
-        <div class="w3-bar-item "></div>
-        <div class="w3-bar-item "></div>          
-      </div>
-      <br>
-      <br>
-      <br>
-      <p>QGIS/ARCGIS</p>
-      <div class="w3-bar w3-border w3-light-grey">
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item "></div>
-        <div class="w3-bar-item "></div>
-        <div class="w3-bar-item "></div>          
-      </div>
-      <br>
-      <br>
-        
-      <div class=" w3-panel w3-black" >    
-        <h1>LANGUAGES</h1>
-      </div>  
-      
-      <br>
-      <p>ARABE</p>
-      <div class="w3-bar w3-border w3-light-grey">
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green  "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>          
-      </div>
-      <br>
-      <br>
-      <br>
-      <p>Francais</p>
-      <div class="w3-bar w3-border w3-light-grey">
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green  "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item  "></div>          
-      </div>
-      <br>
-      <br>
-      <br>
-      <p>ANGLAIS</p>
-      <div class="w3-bar w3-border w3-light-grey">
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green"></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green "></div>
-        <div class="w3-bar-item w3-green  "></div>
-        <div class="w3-bar-item  "></div>
-        <div class="w3-bar-item  "></div>          
-      </div>
-      <br>
-      <br>
-      <div class=" w3-panel w3-black">    
-        <h1>LOISIRS</h1>
-      </div>
-      <br>
-      <p><pre><i class='far fa-futbol' style='font-size:36px'>  FOOTBALL</i></pre></p>
-      <br>
-      <br>
-      <p><pre><i class='fas fa-fighter-jet' style='font-size:36px'>  VOYAGE</i></pre></p>
-      <br>
-      <br>
-      <p><pre><i class='fas fa-book' style='font-size:36px'>  LECTURE</i></pre></p>
-      <br>
-      <br>
-      <p><pre><i class='fas fa-gamepad' style='font-size:36px'>  JEUX VIDEO</i></pre></p>
-        
-
-          
-    </div>  
-
-               
-  </div>
-
-  <div class="w3-threequarter">
-  
-    <div class="w3-col w3-container " style="width:150px">
-    </div>
-
-    <div class="w3-rest w3-container w3-grey">
-      
-      <div class="w3-display-container w3-card w3-white w3-margin-bottom">
-        
-        <div class="w3-display-topleft w3-container w3-padding-64">
-          <h1 style="font-size:130px;"> ZRHALLA HOUSSAM</h1>
-        </div>
-
-        
-        
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <div class="w3-panel w3-black w3-text-white w3-center">
-          <p style='font-size:54px'> INGENIEUR GEOMETRE TOPOGRAPHE</p>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        </div>
-      <div class="w3-pannel w3-container w3-white w3-text-black w3-left w3-leftbar w3-bottombar w3-border-black ">
-        <BR>
-        <div class="w3-center">
-          <h1 style='font-size:70px;'><ins>A MON PROPOS</ins> </h1>
-        </div>
-        <br>
-        <br>
-        <p>Étudiant en cinquième année à l'Institut Agronomique et Vétérinaire Hassan II, je me spécialise en sciences géomatiques et ingénierie topographique. Passionné par ce domaine en constante évolution, je suis déterminé à créer une carrière significative et fructueuse. Mon enthousiasme et mon engagement me poussent à atteindre l'excellence dans le monde des sciences géomatiques, avec pour objectif de contribuer positivement à ce secteur dynamique.</p>
-
-      </div>  
-
-      <div class="w3-pannel w3-container w3-white w3-text-black w3-left w3-leftbar w3-bottombar w3-border-black ">
-        <BR>
-        <div class="w3-center">
-          <h1 style='font-size:70px;'><ins>EXPERIENCE</ins> </h1>
-        </div>
-        <br>
-        <br>
-        <ul class="w3-ul">
-          <li><h2 style='font-size:50px;color:Tomato;'><ins>Stage d'entreprise à MILLENIUM TOPO<ins></h2><div class="w3-opacity"><p>Novembre 2023</p></div><p>Mon passage chez Millinium Topo a été enrichi par l'exploration de divers concepts dans le domaine des sciences géomatiques, notamment la photogrammétrie par drone. Cette expérience a non seulement élargi mes connaissances, mais a également renforcé ma passion pour l'ingénierie topographique.</p></li>
-          <li><h2 style='font-size:50px;color:Tomato;'><ins>Stage de professionnalisme<ins></h2><div class="w3-opacity"><p>Avril 2022</p></div><p>Le stage de professionnalisme a été une expérience transformative qui a considérablement enrichi mes compétences. Il m'a permis de renforcer mes connaissances pratiques et d'appliquer mes connaissances théoriques dans les vastes domaines de la topographie, de la photogrammétrie et de la géodésie.</p></li>
-          <li><h2 style='font-size:50px;color:Tomato;'><ins>Stage cadastrale<ins></h2><div class="w3-opacity"><p>Août 2021</p></div><p>Le stage à l'ANCFCC de Béni Mellal m'a permis de découvrir la notion de l'IGT dans le domaine public ainsi que son rôle essentiel dans la procédure d'immatriculation des terrains et l'inscription des droits y relatifs. Cette expérience m'a offert une compréhension approfondie des processus complexes liés à la gestion foncière.</p></li>
-        </ul>
-        
-
-      </div>
-      <div class="w3-cell-row">
-        <div class="w3-pannel w3-container w3-cell w3-white w3-text-black w3-left w3-leftbar w3-bottombar w3-border-black ">
-         <BR>
-          <div class="w3-center">
-           <h1 style='font-size:70px;'><ins>FORMATION</ins> </h1>
-          </div>
-         <br>
-        <br>
-          <ul class="w3-ul">
-            <li><h2 style='font-size:50px;color:Tomato;'><ins>3ème année cycle d'ingénieur en siences géomatiques et ingénieurie topographique<ins></h2><div class="w3-opacity"><p>2023/2024</p></div></li>
-            <li><h2 style='font-size:50px;color:Tomato;'><ins>Accès à la filière des sciences géomatiques et de l'ingénierie topographique<ins></h2><div class="w3-opacity"><p>2020/2021</p></div></li>
-            <li><h2 style='font-size:50px;color:Tomato;'><ins>Accès à l'année préparatoire aux études supérieures en agronomie<ins></h2><div class="w3-opacity"><p>2019/2020</p></div></li>  
-            <li><h2 style='font-size:50px;color:Tomato;'><ins>Obtention du baccalauréat en sciences physiques, option français.<ins></h2><div class="w3-opacity"><p>2018/2019</p></div></li>
-          </ul>
-        
-
-        </div> 
-        <div class="w3-container w3-white w3-cell w3-center">
-          <p><pre>                                                                                                         </pre></p>
-          <br><br><br><br><br><br><br><br>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Logo_iav.png" height="600px" >
-        <div/> 
-      </div>
+</script>
 
 
-      
-    
-    
-     
-    </div>    
-  
-  </div>
-  </div>
-</div>
 
-
-       
-        
-               
-        
-        
-        
-        <!-- Load external JavaScript -->
-        <script src="scripts.js"></script>
-        
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    </body>
-<footer class="w3-container w3-center w3-margin-top">
-  <div class="w3-container w3-center w3-margin-top w3-teal" style="background-image: url(https://img.freepik.com/free-vector/black-topographic-map-lines-background_1017-13987.jpg)" >
-    <h1>Trouvez-moi sur les réseaux sociaux.</h1>
-
-    <a  href="https://mobile.facebook.com/houssam.zrhalla.1/?_rdc=1&_rdr&refsrc=deprecated" target="_blank"><i class='fab fa-facebook-f' style='font-size:70px'></i></a>
-    <a  href="https://instagram.com/h_us_s_a_m?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><i class='fab fa-instagram' style='font-size:70px'></i> </a>
-    <a  href="https://twitter.com/hussachi1" target="_blank"><i class='fab fa-twitter' style='font-size:70px'></i></a>
-  </div>
-</footer>
-
+</body>
 </html>
